@@ -1,25 +1,16 @@
-# Prerequisites
-#######
-- JDK 11 
-- Maven 3 
-- MySQL 8
+DevCore
+DevCore is a Vagrant-powered, multi-VM infrastructure project that simulates a real-world 5-tier architecture. It includes:
 
-# Technologies 
-- Spring MVC
-- Spring Security
-- Spring Data JPA
-- Maven
-- JSP
-- Tomcat
-- MySQL
-- Memcached
-- Rabbitmq
-- ElasticSearch
-# Database
-Here,we used Mysql DB 
-sql dump file:
-- /src/main/resources/db_backup.sql
-- db_backup.sql file is a mysql dump file.we have to import this dump to mysql db server
-- > mysql -u <user_name> -p accounts < db_backup.sql
+MySQL (db01) – Database layer
+Memcached (mc01) – Caching layer
+RabbitMQ (rmq01) – Messaging layer
+Tomcat (app01) – Java app server
+Nginx (web01) – Web proxy layer
 
+Each VM is auto-provisioned with shell scripts and configured to work together seamlessly, making it perfect for:
 
+DevOps practice & automation
+Local development & testing
+CI/CD pipeline simulation
+
+Runs on VirtualBox + Vagrant, and supports Windows, macOS (Intel), and Linux.
